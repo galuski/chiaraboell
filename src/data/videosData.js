@@ -13,7 +13,7 @@ export const videosData = [
   {
     sectionTitle: "Interior & Fashion",
     videos: [
-      { src: InteriorFashion1, title: "Design Fabrik", description: "Interior" },
+      { src: "https://res.cloudinary.com/djt7wz5gj/video/upload/v1759028379/2_f1whet.mov", title: "Design Fabrik", description: "Interior" },
       { src: "https://res.cloudinary.com/djt7wz5gj/video/upload/v1759028379/2_f1whet.mov", title: "Kapten & SOn", description: "Suit Case" },
       { src: "https://res.cloudinary.com/djt7wz5gj/video/upload/v1759028361/3_hubjoi.mov", title: "SNocks", description: "Gym Wear" },
       { src: "https://res.cloudinary.com/djt7wz5gj/video/upload/v1759028384/4_uxnjgz.mov", title: "Pure essentials", description: "Gym Wear" },
