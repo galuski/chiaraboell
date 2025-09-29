@@ -1,5 +1,3 @@
-// import InteriorFashion1 from "./../../public/videos/InteriorFashion/1.mp4";
-
 export const videosData = [
   {
     sectionTitle: "Fitness",
