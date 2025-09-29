@@ -4,8 +4,8 @@
   align-items: start;
   gap: 75px;
   width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-bottom: 50px;
 }
 
@@ -41,8 +41,8 @@
     align-items: center;
     gap: 25px;
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     margin-bottom: 50px;
     text-align: center;
   }

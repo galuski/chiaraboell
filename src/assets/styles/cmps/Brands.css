@@ -1,7 +1,7 @@
 .brands {
   overflow: hidden;
   white-space: nowrap;
-  margin: 50px 3rem 100px 3rem;
+  margin: 50px 2rem 100px 2rem;
 }
 
 @keyframes infinite {
@@ -23,7 +23,7 @@
   content: "";
   position: absolute;
   top: 0;
-  width: 3rem;
+  width: 2rem;
   height: 100%;
   z-index: 2;
 }
