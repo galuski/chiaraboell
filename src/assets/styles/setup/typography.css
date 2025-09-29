@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AbrilFatface';
+    src: url(/src/assets/fonts/AbrilFatface-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'DMSans';
+    src: url(/src/assets/fonts/DMSans_18pt-Black.ttf);
+}

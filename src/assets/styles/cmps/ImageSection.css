@@ -1,0 +1,36 @@
+.image-section {
+  width: 100%;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.image-section-title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+@media (max-width: 1050px) {
+  .image-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    margin: 20px 0;
+    gap: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .image-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    margin: 20px 0;
+    gap: 20px;
+  }
+}

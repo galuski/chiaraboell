@@ -1,0 +1,25 @@
+.navbar-list-container {
+  display: flex;
+}
+
+@media (max-width: 950px) {
+  .navbar-list-container {
+    display: none;
+  }
+
+  .navbar-list-container.open {
+    position: fixed; /* תפריט צף */
+    top: 0;
+    right: 0; /* צמוד לצד ימין */
+    width: 200px; /* קבוע 150px */
+    height: 100%; /* כל הגובה */
+    background-color: var(--clr-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* שהתפריט יתחיל מצד ימין */
+    justify-content: flex-start;
+    padding: 110px 20px; /* רווח פנימי */
+    gap: 30px;
+    z-index: 100;
+  }
+}

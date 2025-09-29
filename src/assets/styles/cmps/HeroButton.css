@@ -1,0 +1,55 @@
+.hero-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0; /* כדי שה־a ישלוט במידות */
+}
+
+.hero-btn a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid var(--clr-bg);
+  text-transform: uppercase;
+  color: var(--clr-bg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.hero-btn a::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+  transform: scaleY(1);
+}
+
+.hero-btn a:hover::before {
+  transform: scaleY(0);
+}
+
+.hero-btn a::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background-color: transparenb;
+  transition: 0.3s ease-in-out;
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+}
+
+.hero-btn a:hover::after {
+  transform: scaleX(0);
+}
+
+.hero-btn a span {
+  position: relative;
+  z-index: 3;
+}
