@@ -1,0 +1,19 @@
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.services-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: start;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
