@@ -4,3 +4,11 @@
   padding: 0 2rem;
   overflow-x: hidden;
 }
+
+@media (max-width: 768px) {
+
+  .clients {
+    padding: 0;
+  }
+
+  }

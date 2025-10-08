@@ -1,33 +1,28 @@
-/* ====== אזור ראשי של הסליידר ====== */
-.clients {
-  width: 100%;
-  padding: 0 1rem;
-  overflow-x: hidden; /* חוסם גלילה אופקית */
-  box-sizing: border-box;
-}
-
-/* ====== מבנה בסיס של slick ====== */
 .slick-slider,
 .slick-list {
   width: 100%;
-  max-width: 100vw; /* לא לחרוג מרוחב המסך */
+  max-width: 100vw;
   overflow: hidden;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* slick-track אחראי על תנועת הסליידים */
+/* ====== slick-track אחראי על תנועת הסליידים ====== */
 .slick-track {
   display: block !important;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ❌ לא נגדיר כאן flex, כדי ש-slick יוכל להסתיר שקופיות אחרות */
+/* ====== כל סלייד בודד ====== */
+/* ❗ אל תשתמש כאן ב-display:flex, כדי ש-slick יוכל להסתיר שקופיות לא פעילות */
 .slick-slide {
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
-/* ✅ במקום זה, נרכז את התוכן בכרטיס עצמו */
+/* ====== תוכן פנימי של כל כרטיס ====== */
 .preview-client {
   display: flex;
   flex-direction: column;
@@ -35,7 +30,36 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  padding: 1rem;
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
+
+/* ====== תמונה ====== */
+.preview-client img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* ====== כוכבים ====== */
+.preview-client .client-stars {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: gold;
+}
+
+/* ====== טקסט התגובה ====== */
+.preview-client .client-comment {
+  max-width: 320px;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  color: #111;
+  font-weight: 500;
 }
 
 /* ====== חצים ====== */
@@ -45,12 +69,16 @@
   top: 50% !important;
   transform: translateY(-50%) !important;
   border-radius: 50% !important;
+  width: 30px;
+  height: 30px;
 
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   z-index: 3 !important;
   transition: 0.3s ease;
+  background-color: #fff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* חץ שמאלי */
@@ -66,7 +94,7 @@
 /* צבע האייקון שבתוך החצים */
 .slick-prev::before,
 .slick-next::before {
-  color: #000000 !important;
+  color: #000 !important;
   font-size: 18px !important;
   opacity: 1 !important;
 }
@@ -74,6 +102,7 @@
 /* ====== נקודות ניווט (dots) ====== */
 .slick-dots {
   bottom: -25px !important;
+  text-align: center;
 }
 
 .slick-dots li button:before {
@@ -98,13 +127,13 @@
 }
 
 @media (max-width: 768px) {
-  /* מסתיר חצים במובייל */
   .slick-prev,
   .slick-next {
     display: none !important;
   }
 
-  .clients {
-    padding: 0; /* מסיר רווחים בצדדים */
+  .preview-client {
+    max-width: 100%;
+    padding: 1rem;
   }
 }

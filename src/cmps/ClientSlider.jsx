@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import clientsData from "../data/clientsData.json";
 import { PreviewClient } from "./PreviewClient";
@@ -9,45 +9,45 @@ import { PreviewClient } from "./PreviewClient";
 export default function ClientSlider() {
   const { clients } = clientsData;
   const sliderRef = useRef(null);
-  const [isReady, setIsReady] = useState(false);
+
+  // קובע כמה קלפים להראות לפי רוחב המסך בפועל
+  const getSlidesToShow = () => {
+    const w = window.innerWidth;
+    if (w < 768) return 1;
+    if (w < 1050) return 2;
+    return 3;
+  };
+
+  const [slidesToShow, setSlidesToShow] = useState(() => getSlidesToShow());
+
+  useEffect(() => {
+    const onResize = () => {
+      const next = getSlidesToShow();
+      setSlidesToShow(prev => (prev === next ? prev : next));
+    };
+    window.addEventListener("resize", onResize);
+    // ריצה מידית ליתר ביטחון (מכשירי מובייל אמיתיים)
+    onResize();
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 700,
-    slidesToShow: 3, // ברירת מחדל לשולחן עבודה
+    slidesToShow,          // 👈 נשלט ע"י ה־state
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: false,
     pauseOnFocus: false,
     pauseOnDotsHover: false,
-    responsive: [
-      {
-        breakpoint: 1050,
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
-      },
-    ],
+    // בלי responsive – אנחנו שולטים ידנית
   };
 
-  useEffect(() => {
-    // מחכים לרינדור מלא ואז “מכריחים” את slick לחשב שוב
-    const timer = setTimeout(() => {
-      window.dispatchEvent(new Event("resize"));
-      setIsReady(true);
-    }, 400);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isReady) return null; // מונע רינדור לפני שהרוחב נמדד
-
   return (
-    <Slider ref={sliderRef} {...settings}>
+    // key מכריח רה־איניט בכל שינוי כמות השקופיות
+    <Slider key={slidesToShow} ref={sliderRef} {...settings}>
       {clients.map((client, idx) => (
         <PreviewClient key={idx} client={client} />
       ))}
