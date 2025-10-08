@@ -1,0 +1,40 @@
+{
+  "clients": [
+    {
+      "src": "/images/client/Woolsocks.webp",
+      "alt": "Woolsocks",
+      "stars": "⭐⭐⭐⭐⭐",
+      "comment": "“Yet another video she made for us, and again its outstanding! Delivered exactly as our script and requiremets, 10/10!”"
+    },
+    {
+      "src": "/images/client/Sohype.webp",
+      "alt": "Sohype",
+      "stars": "⭐⭐⭐⭐⭐",
+      "comment": "“Outstanding video! Chiara´s attention to detail and creativity shines through making each piece uniquely captivating. Every moment is thoughtfully crafted and engaging. Definitely worth watching and highly recommended!.”"
+    },
+    {
+      "src": "/images/client/snocks.png",
+      "alt": "snocks",
+      "stars": "⭐⭐⭐⭐⭐",
+      "comment": "“Chiara exceeded our expectations in transforming our social media presence. The vision she brought to our campaigns created a genuine connection with our  growing audience.”"
+    },
+    {
+      "src": "/images/client/OneWonder.png",
+      "alt": "One Wonder",
+      "stars": "⭐⭐⭐⭐⭐",
+      "comment": "“Deine positive Ausstrahlung hat uns von Anfang an begeistert. Deine Begeisterung für unsere Marke und deine Natürlichkeit haben maßgeblich zum Erfolg unserer Kampagnen beigetragen.”"
+    },
+    {
+      "src": "/images/client/earnesto.png",
+      "alt": "earnesto",
+      "stars": "⭐⭐⭐⭐⭐",
+      "comment": "“Die Kundin hat es direkt freigegeben. 😊 Das ging jetzt ja wieder flott. Vielen Dank dafür! Die Zusammenarbeit mit dir macht wirklich immer Spaß! 😊”"
+    },
+    {
+      "src": "/images/client/Mcfit.jpg",
+      "alt": "Mcfit",
+      "stars": "⭐⭐⭐⭐⭐",
+      "comment": "“Deine tolle, positive Ausstrahlung am Set hat uns gestern alle total angesteckt. Wir sind total happy mit dem Output, danke dir, liebe Chiara.”"
+    }
+  ]
+}

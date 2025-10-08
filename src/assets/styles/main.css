@@ -28,4 +28,11 @@
 @import 'cmps/Services.css';
 @import 'cmps/ServicesList.css';
 @import 'cmps/ServicePreview.css';
+@import 'cmps/Contact.css';
+@import 'cmps/Form.css';
+@import 'cmps/ToastAlert.css';
+@import 'cmps/Clients.css';
+@import 'cmps/PreviewClient.css';
+@import 'cmps/ClientSlider.css';
+@import 'cmps/Title.css';
 

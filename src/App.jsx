@@ -9,6 +9,8 @@ import { Counter } from "./cmps/Counter";
 import { VideoList } from "./cmps/VideoList";
 import { ImagesList } from "./cmps/ImagesList";
 import { Services } from "./cmps/Services";
+import { Contact } from "./cmps/Contact";
+import { Clients } from "./cmps/Clients";
 
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
         <VideoList />
         <ImagesList />
         <Services />
+        <Contact />
+        <Clients />
       </main>
     </>
   )

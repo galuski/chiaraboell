@@ -1,9 +1,10 @@
 import { ServicesList } from "./ServicesList";
+import { Title } from "./Title";
 
 export function Services() {
     return (
         <section className="services">
-            <h1>Services</h1>
+            <Title title="Services" subtitle="What do I offer" />
             <ServicesList />
         </section>
     )
