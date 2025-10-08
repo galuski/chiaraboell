@@ -14,10 +14,10 @@ export default function ClientSlider() {
     dots: true,
     infinite: true,
     speed: 700,
-    slidesToShow: 3,
+    slidesToShow: 3, // ברירת מחדל לשולחן עבודה
     slidesToScroll: 1,
-    autoplay: true,          // 👈 מפעיל מעבר אוטומטי
-    autoplaySpeed: 5000,     // כל 5 שניות
+    autoplay: true,
+    autoplaySpeed: 5000,
     pauseOnHover: false,
     pauseOnFocus: false,
     pauseOnDotsHover: false,
@@ -28,29 +28,18 @@ export default function ClientSlider() {
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1 },
+        settings: { slidesToShow: 1 }, // 👈 במובייל – רק אחד
       },
     ],
   };
 
-  // 👇 טריק שמבטיח רענון תקין ברספונסיביות גם אחרי build
   useEffect(() => {
-    const handleResize = () => {
-      if (sliderRef.current) {
-        sliderRef.current.slickGoTo(0, true); // מאפס שקופית
-      }
-    };
-    window.addEventListener("resize", handleResize);
-
-    // 👇 מוודא שה־autoplay וה־responsive נרשמים נכון במובייל
+    // 👇 מאלץ את slick לחשב מחדש את ה-breakpoints
     const timer = setTimeout(() => {
       window.dispatchEvent(new Event("resize"));
-    }, 300);
+    }, 200);
 
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   return (
