@@ -22,12 +22,20 @@
   display: block !important;
 }
 
-/* כל סלייד בודד */
+/* ❌ לא נגדיר כאן flex, כדי ש-slick יוכל להסתיר שקופיות אחרות */
 .slick-slide {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
   box-sizing: border-box;
+}
+
+/* ✅ במקום זה, נרכז את התוכן בכרטיס עצמו */
+.preview-client {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
 }
 
 /* ====== חצים ====== */
